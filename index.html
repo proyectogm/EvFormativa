@@ -28,22 +28,77 @@
 
 <div class="container">
   <main>
-    <h1>Registro de Usuario</h1>
-    <form id="formRegistro">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" required>
+    <h2>Registro de Usuario </h2>
+    
 
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" required>
-
-      <label for="password">Contraseña:</label>
-      <input type="password" id="password" required>
-
-      <label for="confirmPassword">Confirmar contraseña:</label>
-      <input type="password" id="confirmPassword" required>
-
-      <button type="submit">Registrarse</button>
-    </form>
+<!-- Formulario-->
+ <form id="formRegistro" class="row g-3">
+  <div class="col-md-4">
+    <label id= "nombre" for="validationServer01" class="form-label">Nombre Completo</label>
+    <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
+    <div class="valid-feedback">
+      Nombre y Apellido
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label id = "correo" for="validationServer02" class="form-label">Correo Electronico</label>
+    <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
+    <div class="valid-feedback">
+      ingrese su correo
+    </div>
+  </div>
+  <p></p>
+  <div class="col-md-4">
+    <label id= "password" for="validationServer01" class="form-label">Contraseña</label>
+    <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
+    <div class="valid-feedback">
+    <p> ▪ Debe tener al menos 8 caracteres</p>
+    <p> ▪ Debe incluir al menos una letra mayúscula</p>
+    <p> ▪ Una letra minúscula</p>
+    <p> ▪ Un número</p>
+    <p> ▪ Un carácter especial (ejemplo: @#$%).</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label id = "confirmPassword" for="validationServer02" class="form-label">Confirme Contraseña</label>
+    <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
+    <div class="valid-feedback">
+      Repita la contraseña
+    </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServer03" class="form-label">Ciudad</label>
+    <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+    <div id="validationServer03Feedback" class="invalid-feedback">
+      Ingrese ciudad válida.
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServer04" class="form-label">Comuna</label>
+    <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+      <option selected disabled value="">Choose...</option>
+      <option>...</option>
+    </select>
+    <div id="validationServer04Feedback" class="invalid-feedback">
+      Comuna invalida.
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+      <label class="form-check-label" for="invalidCheck3">
+        Acepta los terminos y condiciones
+      </label>
+      <div id="invalidCheck3Feedback" class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form>
   </main>
   <script src="js/validaciones.js"></script>
 
